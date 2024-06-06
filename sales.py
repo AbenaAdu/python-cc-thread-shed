@@ -136,3 +136,10 @@ for transaction in transactions_clean:
   customers.append(transaction[0])
   sales.append(transaction[1])
   thread_sold.append(transaction[2])
+
+#Determining Total Sales 
+total_sales = 0
+
+for sale in sales:
+  total_sales += float(sale.strip("$"))
+  
