@@ -118,3 +118,21 @@ daily_transactions_split = []
 
 for transaction in daily_transactions:
   daily_transactions_split.append(transaction.split("&"))
+
+#Cleaning whitespace in dataset
+transactions_clean = []
+for transaction in daily_transactions_split:
+  transactions_clean2 = []
+  for line in transaction:
+    transactions_clean2.append(line.strip())
+  transactions_clean.append(transactions_clean2)
+
+#Separating dataset by customers, sales, and thread sold
+customers = []
+sales = []
+thread_sold = []
+
+for transaction in transactions_clean:
+  customers.append(transaction[0])
+  sales.append(transaction[1])
+  thread_sold.append(transaction[2])
