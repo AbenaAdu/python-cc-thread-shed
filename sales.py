@@ -107,7 +107,7 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
 
 # Replaced artifacts with periods to easily separate data details
-daily_sales_replaced = daily_sales.replace(";,;", "&")
+daily_sales_replaced = daily_sales.replace(";,;", "-")
 print(daily_sales_replaced)
 
 #Splitting data via commas
@@ -117,7 +117,7 @@ daily_transactions = daily_sales_replaced.split(",")
 daily_transactions_split = []
 
 for transaction in daily_transactions:
-  daily_transactions_split.append(transaction.split("&"))
+  daily_transactions_split.append(transaction.split("-"))
 
 #Cleaning whitespace in dataset
 transactions_clean = []
