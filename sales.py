@@ -143,3 +143,22 @@ total_sales = 0
 for sale in sales:
   total_sales += float(sale.strip("$"))
   
+#Determining Count of Colors
+thread_sold_split = []
+
+#Splitting data with mutiple colors 
+for thread in thread_sold:
+  if "&" not in thread:
+    thread_sold_split.append(thread)
+  else:
+    mutiple_color_split = thread.split("&")
+    for detail in mutiple_color_split:
+      thread_sold_split.append(detail)
+
+#Function that counts the number of times a color appears 
+def color_count(color):
+  color_count = 0
+  for thread in thread_sold_split:
+    if thread == color:
+      color_count += 1
+  return color_count
