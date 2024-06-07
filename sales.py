@@ -162,3 +162,10 @@ def color_count(color):
     if thread == color:
       color_count += 1
   return color_count
+
+#All the colors the Thread Shed offers
+colors = ["red", "yellow", "green", "white", "black", "blue", "purple"]
+
+#Prints statement for how many threads were sold for each color
+for color in colors:
+  print("Thread Shed sold {} threads of {} thread today.".format(color_count(color), color))
